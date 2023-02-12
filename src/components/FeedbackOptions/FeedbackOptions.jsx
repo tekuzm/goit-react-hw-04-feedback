@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
-
 import capitalize from 'components/capitalize';
 
+// ========== styles ==========
+
+import styles from './FeedbackOptions.module.css';
+
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div>
+  <div className={styles.feedbackOptions}>
     {options.map(option => (
       <button
+        className={styles.button}
         type="button"
         key={option}
         onClick={() => onLeaveFeedback(option)}
